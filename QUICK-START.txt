@@ -1,0 +1,54 @@
+========================================
+FAST KIOSK ISO - READY IN 10 MINUTES
+========================================
+
+ON YOUR XUBUNTU MACHINE, RUN THESE COMMANDS:
+
+Step 1: Download ISO (5 minutes)
+---------------------------------
+wget https://dl.webconverger.com/latest.iso -O kiosk.iso
+
+OR download via browser:
+https://webconverger.com/download/
+
+
+Step 2: Flash to USB (2 minutes)
+---------------------------------
+# Find your USB drive
+lsblk
+
+# Flash (replace sdX with your drive, like sdb or sdc)
+sudo dd if=kiosk.iso of=/dev/sdX bs=4M status=progress && sync
+
+
+Step 3: Boot and Configure (3 minutes)
+---------------------------------------
+1. Boot from USB on your kiosk computer
+2. Press TAB at the boot menu
+3. Add this to the boot line:
+
+bookmarks="https://www.globo.com.br|Globo,https://www.uol.com.br|UOL,https://www.gazetadopovo.com.br|Gazeta,https://www.youtube.com|YouTube,https://www.espn.com.br|ESPN,https://www.gazetaesportiva.com.br|Gazeta Esportiva" dns1=185.228.168.168 dns2=185.228.169.168
+
+4. Press ENTER to boot
+
+
+DONE! ✅
+========================================
+
+Your Brazilian bookmarks:
+- Globo
+- UOL
+- Gazeta do Povo
+- YouTube
+- ESPN Brasil
+- Gazeta Esportiva
+
+Features:
+✅ Browser-only kiosk
+✅ Adult content blocked (DNS filtering)
+✅ SafeSearch enforced
+✅ Resets on reboot
+✅ Users can browse any safe site
+✅ No downloads
+
+========================================

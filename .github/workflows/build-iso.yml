@@ -1,0 +1,79 @@
+name: Build Kiosk Linux ISO
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Free up disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/share/boost
+        sudo apt-get clean
+        df -h
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          debootstrap \
+          squashfs-tools \
+          xorriso \
+          isolinux \
+          syslinux-efi \
+          grub-pc-bin \
+          grub-efi-amd64-bin \
+          mtools
+
+    - name: Make scripts executable
+      run: |
+        chmod +x build-iso.sh
+        chmod +x scripts/setup-chroot.sh
+
+    - name: Build ISO
+      run: sudo ./build-iso.sh
+
+    - name: Calculate checksums
+      run: |
+        ls -lh kiosk-linux.iso
+        md5sum kiosk-linux.iso > kiosk-linux.iso.md5
+        sha256sum kiosk-linux.iso > kiosk-linux.iso.sha256
+        cat kiosk-linux.iso.md5
+        cat kiosk-linux.iso.sha256
+
+    - name: Compress ISO
+      run: |
+        gzip -9 kiosk-linux.iso
+        ls -lh kiosk-linux.iso.gz
+
+    - name: Upload ISO artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: kiosk-linux-iso
+        path: |
+          kiosk-linux.iso.gz
+          kiosk-linux.iso.md5
+          kiosk-linux.iso.sha256
+        retention-days: 90
+
+    - name: Create Release (on tag)
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          kiosk-linux.iso.gz
+          kiosk-linux.iso.md5
+          kiosk-linux.iso.sha256
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

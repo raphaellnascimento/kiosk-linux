@@ -1,0 +1,91 @@
+{
+  "checksum": "0000000000000000",
+  "roots": {
+    "bookmark_bar": {
+      "children": [
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000001",
+          "id": "5",
+          "name": "Globo",
+          "type": "url",
+          "url": "https://www.globo.com.br"
+        },
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000002",
+          "id": "6",
+          "name": "UOL",
+          "type": "url",
+          "url": "https://www.uol.com.br"
+        },
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000003",
+          "id": "7",
+          "name": "Gazeta do Povo",
+          "type": "url",
+          "url": "https://www.gazetadopovo.com.br"
+        },
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000004",
+          "id": "8",
+          "name": "YouTube",
+          "type": "url",
+          "url": "https://www.youtube.com"
+        },
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000005",
+          "id": "9",
+          "name": "ESPN Brasil",
+          "type": "url",
+          "url": "https://www.espn.com.br"
+        },
+        {
+          "date_added": "13300000000000000",
+          "date_last_used": "0",
+          "guid": "00000000-0000-0000-0001-000000000006",
+          "id": "10",
+          "name": "Gazeta Esportiva",
+          "type": "url",
+          "url": "https://www.gazetaesportiva.com.br"
+        }
+      ],
+      "date_added": "13300000000000000",
+      "date_last_used": "0",
+      "date_modified": "0",
+      "guid": "00000000-0000-0000-0001-000000000000",
+      "id": "1",
+      "name": "Bookmarks bar",
+      "type": "folder"
+    },
+    "other": {
+      "children": [],
+      "date_added": "13300000000000000",
+      "date_last_used": "0",
+      "date_modified": "0",
+      "guid": "00000000-0000-0000-0002-000000000000",
+      "id": "2",
+      "name": "Other bookmarks",
+      "type": "folder"
+    },
+    "synced": {
+      "children": [],
+      "date_added": "13300000000000000",
+      "date_last_used": "0",
+      "date_modified": "0",
+      "guid": "00000000-0000-0000-0003-000000000000",
+      "id": "3",
+      "name": "Mobile bookmarks",
+      "type": "folder"
+    }
+  },
+  "version": 1
+}

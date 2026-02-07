@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+*.iso
+*.img
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# IDE files
+.vscode/
+.idea/workspace.xml
+.idea/tasks.xml
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db

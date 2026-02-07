@@ -1,0 +1,19 @@
+{
+  "ForceGoogleSafeSearch": true,
+  "ForceYouTubeRestrict": 2,
+  "DownloadRestrictions": 3,
+  "IncognitoModeAvailability": 1,
+  "DeveloperToolsDisabled": true,
+  "AllowDeletingBrowserHistory": false,
+  "DefaultDownloadDirectory": "/tmp",
+  "DownloadDirectory": "/tmp",
+  "PromptForDownloadLocation": false,
+  "AllowFileSelectionDialogs": false,
+  "RestoreOnStartup": 4,
+  "HomepageIsNewTabPage": true,
+  "BrowserSignin": 0,
+  "SyncDisabled": true,
+  "ExtensionInstallBlocklist": ["*"],
+  "URLBlocklist": [],
+  "URLAllowlist": ["*"]
+}

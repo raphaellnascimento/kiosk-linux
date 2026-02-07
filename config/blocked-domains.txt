@@ -1,0 +1,10 @@
+# Blocked domains list
+# Add one domain per line (without http:// or https://)
+# Lines starting with # are comments
+
+# Example blocked domains
+# adult-site.com
+# gambling-site.com
+
+# The system also uses CleanBrowsing Family Filter DNS servers
+# which automatically block adult content at the DNS level
