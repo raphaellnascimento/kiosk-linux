@@ -2,6 +2,22 @@
 
 A stateless, locked-down Linux distribution that boots directly into a web browser with adult content filtering.
 
+## FAST METHOD - 20 Minutes! (RECOMMENDED)
+
+Instead of building from scratch (2+ hours), customize an existing Debian Live ISO:
+
+### One Command (on Xubuntu/Ubuntu):
+
+```bash
+wget https://raw.githubusercontent.com/raphaellnascimento/kiosk-linux/main/customize-debian-live.sh -O customize.sh && chmod +x customize.sh && sudo ./customize.sh
+```
+
+**Total time: 20 minutes** vs 2+ hours building from scratch!
+
+See [FAST-METHOD.md](FAST-METHOD.md) for details.
+
+---
+
 ## Features
 
 - Boots directly to Chromium browser in kiosk mode
