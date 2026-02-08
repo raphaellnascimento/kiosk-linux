@@ -1,0 +1,123 @@
+========================================
+BUILD KIOSK ISO ON XUBUNTU - STEP BY STEP
+========================================
+
+Total time: 20-25 minutes
+No Docker needed!
+No GitHub Actions!
+Just runs directly on Linux!
+
+========================================
+STEP 1: Open Terminal on Xubuntu
+========================================
+
+Press Ctrl+Alt+T to open terminal
+
+
+========================================
+STEP 2: Run This One Command
+========================================
+
+Copy and paste this entire command:
+
+wget https://raw.githubusercontent.com/raphaellnascimento/kiosk-linux/main/BUILD-ON-XUBUNTU.sh -O build-kiosk.sh && chmod +x build-kiosk.sh && ./build-kiosk.sh
+
+
+What it does:
+1. Downloads the build script
+2. Makes it executable
+3. Runs it automatically
+
+Enter your password when asked.
+
+
+========================================
+STEP 3: Wait (15-20 minutes)
+========================================
+
+The script will:
+✅ Install dependencies (2 min)
+✅ Download project from GitHub (1 min)
+✅ Build the ISO (15-20 min)
+
+You'll see progress messages.
+
+Just wait until you see:
+"✅ BUILD COMPLETE!"
+
+
+========================================
+STEP 4: Flash to USB
+========================================
+
+# Insert USB drive
+
+# Find it:
+lsblk
+
+# Flash (replace sdX with your drive, like sdb or sdc):
+sudo dd if=~/kiosk-linux/kiosk-linux.iso of=/dev/sdX bs=4M status=progress && sync
+
+
+========================================
+STEP 5: Boot and Use!
+========================================
+
+1. Insert USB in target computer
+2. Boot from USB
+3. Browser opens automatically with your bookmarks!
+
+
+========================================
+YOUR KIOSK INCLUDES:
+========================================
+
+✅ Brazilian Bookmarks:
+   - Globo (www.globo.com.br)
+   - UOL (www.uol.com.br)
+   - Gazeta do Povo (www.gazetadopovo.com.br)
+   - YouTube (www.youtube.com)
+   - ESPN Brasil (www.espn.com.br)
+   - Gazeta Esportiva (www.gazetaesportiva.com.br)
+
+✅ Adult Content Blocked:
+   - CleanBrowsing Family DNS (185.228.168.168)
+   - Google SafeSearch enforced
+   - YouTube Restricted Mode
+
+✅ Security:
+   - No downloads
+   - No terminal access
+   - Browser only
+   - Resets on reboot
+
+✅ User Freedom:
+   - Can visit any safe website
+   - Can type any URL
+   - Can search Google
+   - Can watch YouTube (filtered)
+
+
+========================================
+TROUBLESHOOTING
+========================================
+
+If wget fails:
+   sudo apt install wget -y
+
+If git fails:
+   sudo apt install git -y
+
+If build fails:
+   Make sure you have at least 20GB free space
+   Check: df -h
+
+
+========================================
+THAT'S IT!
+========================================
+
+One command, 20 minutes, done!
+
+Much faster than GitHub Actions!
+Much simpler than Docker!
