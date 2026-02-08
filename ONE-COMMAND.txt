@@ -1,0 +1,34 @@
+========================================
+MÉTODO MAIS RÁPIDO - UM COMANDO SÓ!
+========================================
+
+No Xubuntu, cole este comando e aperte Enter:
+
+wget https://raw.githubusercontent.com/raphaellnascimento/kiosk-linux/main/customize-debian-live.sh -O customize.sh && chmod +x customize.sh && sudo ./customize.sh
+
+========================================
+
+O que vai acontecer:
+
+1. ⬇️  Baixa o script (1 segundo)
+2. ⬇️  Baixa Debian Live ISO (10 min)
+3. 🔧 Customiza com seus bookmarks (8 min)
+4. 📦 Cria ISO final (2 min)
+5. ✅ PRONTO! (20 min total)
+
+========================================
+
+Depois de pronto:
+
+Gravar no pen drive (troque sdX!):
+sudo dd if=kiosk-linux-custom.iso of=/dev/sdX bs=4M status=progress && sync
+
+========================================
+
+Inclui TUDO:
+✅ Bookmarks brasileiros
+✅ Bloqueio de sites adultos (DNS)
+✅ Modo kiosk automático
+✅ Reseta ao reiniciar
+
+========================================
