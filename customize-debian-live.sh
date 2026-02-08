@@ -26,8 +26,8 @@ log "=========================================="
 echo ""
 
 WORK_DIR="$(pwd)/debian-custom"
-ISO_URL="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.8.0-amd64-xfce.iso"
-ISO_NAME="debian-live.iso"
+ISO_URL="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.9.0-amd64-xfce.iso"
+ISO_NAME="debian-live-12.9.0-amd64-xfce.iso"
 OUTPUT_ISO="kiosk-linux-custom.iso"
 
 # Step 1: Download Debian Live
