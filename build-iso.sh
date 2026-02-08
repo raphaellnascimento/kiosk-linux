@@ -84,9 +84,9 @@ log "Installing packages and configuring system..."
 chroot "$WORK_DIR/chroot" /bin/bash /tmp/setup-chroot.sh
 
 # Create squashfs filesystem
-log "Creating compressed filesystem (this may take a while)..."
+log "Creating compressed filesystem (fast compression enabled)..."
 mksquashfs "$WORK_DIR/chroot" "$WORK_DIR/iso/live/filesystem.squashfs" \
-    -comp xz -b 1M -Xdict-size 100% \
+    -comp gzip -b 1M \
     -e boot
 
 # Copy kernel and initrd
